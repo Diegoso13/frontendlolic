@@ -270,7 +270,7 @@ const rowsActuales = computed(() => {
 const totalRegistros = computed(() => rowsActuales.value.length)
 
 // columnas tabla
-const columns = [
+const columns = computed(() => [
   {
     name: config.value.field,
     label: tituloActual.value,
@@ -278,7 +278,7 @@ const columns = [
     align: 'left',
     sortable: true
   }
-]
+])
 
 // listar actual
 async function listarActual() {
