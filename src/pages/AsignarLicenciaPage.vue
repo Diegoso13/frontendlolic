@@ -388,7 +388,6 @@ async function cargarCamposDesdeRegistro() {
   if (!hayRegistro.value) return
 
   usuario.value = registroOfimatica.value.usuario || ''
-  ticket.value = registroOfimatica.value.ticket_asignacion || ''
 
   const softwareTxt = registroOfimatica.value.software || ''
   const propietarioTxt = registroOfimatica.value.propietario || ''
