@@ -69,7 +69,7 @@ const routes = [
       {
         path: '/catalogos',
         component: () => import('pages/catalogoListPage.vue'),
-        meta: { roles: ['admin,licenciamiento'] },
+        meta: { roles: ['admin', 'licenciamiento'] },
       },
     ],
   },
