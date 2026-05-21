@@ -441,6 +441,7 @@ async function trasladarLicencia() {
 
   loadingTraslado.value = true
 
+  try {
     const payload = {
       equipo_origen: equipoOrigen.value.nombre_equipo_id,
       equipo_destino: equipoDestino.value.id,
@@ -460,8 +461,16 @@ async function trasladarLicencia() {
 
     // limpiar sin borrar registros
     limpiarCampos()
-    loadingTraslado.value = false
 
+    $q.notify({
+      type: 'positive',
+      message: 'Traslado realizado correctamente.'
+    })
+
+  } finally {
+    // SIEMPRE se ejecuta
+    loadingTraslado.value = false
+  }
 }
 
 // ===============================

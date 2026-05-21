@@ -89,7 +89,7 @@
 
           <q-input
             v-model="ticket"
-            label="Ticket de retiro"
+            label="Ticket de recuperación"
             type="number"
             inputmode="numeric"
             class="no-spinner"
