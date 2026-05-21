@@ -54,7 +54,8 @@ api.interceptors.response.use(
     const originalRequest = error.config
 
     // si es 401 y no hemos reintentado
-    if (error.response && error.response.status === 401 && !originalRequest._retry) {
+    if (error.response && error.response.status === 401 && !originalRequest._retry && !originalRequest.url.includes('login') &&
+  !originalRequest.url.includes('refresh')) {
       originalRequest._retry = true
 
       // Si ya se está refrescando, encolamos

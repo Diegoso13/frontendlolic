@@ -168,7 +168,7 @@ const modo = ref(route.query.modo || 'crear')
 // ===============================
 // CREAR
 // ===============================
-const prefijo_creacion = ref('PORTADM')
+const prefijo_creacion = ref('AXION')
 const numeroPlaca = ref('')
 const serial_creacion = ref('')
 
@@ -177,20 +177,19 @@ const serial_creacion = ref('')
 // ===============================
 const nombre_actual = ref('')
 const equipo_id = ref('')
-const prefijo_edicion = ref('PORTADM')
+const prefijo_edicion = ref('AXION')
 const nuevo_numeroPlaca = ref('')
 const serial_edicion = ref('')
 
 // opciones prefijo
 const opcionesprefijo = [
-  'prueba',
-  'PORTADM',
-  'OL',
-  'ED',
-  'BG',
-  'ME',
-  'IR_PREMISA',
-  'PR_PREMISA'
+  'NX',
+  'AXION',
+  'QRT',
+  'VEL',
+  'ZK',
+  'ORV',
+  'NOVA',
 ]
 
 // ===============================
@@ -242,7 +241,7 @@ async function cargarEquipoEditar() {
   equipo_id.value = equipo.id
 
   const partes = equipo.nombre_equipo.split('-')
-  prefijo_edicion.value = partes[0] || 'PORTADM'
+  prefijo_edicion.value = partes[0] || 'AXION'
   nuevo_numeroPlaca.value = partes[1] || ''
   serial_edicion.value = equipo.serial || ''
 }
