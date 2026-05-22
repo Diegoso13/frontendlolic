@@ -462,10 +462,6 @@ async function trasladarLicencia() {
     // limpiar sin borrar registros
     limpiarCampos()
 
-    $q.notify({
-      type: 'positive',
-      message: 'Traslado realizado correctamente.'
-    })
 
   } finally {
     // SIEMPRE se ejecuta
