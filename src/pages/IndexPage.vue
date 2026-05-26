@@ -50,7 +50,6 @@
 
     </div>
 
-    <!-- CENTRO: hero + mini-cards -->
     <div class="center-wrapper">
 
       <q-card class="hero-card q-mb-md">
