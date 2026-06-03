@@ -166,13 +166,6 @@
             dense
           />
 
-          <q-input
-            :model-value="usuarioLic"
-            label="Usuario licenciamiento"
-            readonly
-            outlined
-            dense
-          />
 
           <q-input
             v-model="observacionorigen"

@@ -352,8 +352,20 @@ function eliminarRegistro() {
     cancel: true,
     persistent: true
   }).onOk(async () => {
+    const pagination = config.value.crud.pagination.value
+
+    // Si es el único registro visible y no estamos en la primera página
+    if (
+      rowsActuales.value.length === 1 &&
+      pagination.page > 1
+    ) {
+      pagination.page--
+    }
+
     await config.value.crud.eliminar(registroSeleccionado.value.valor)
+
     selected.value = []
+
     await listarActual()
   })
 

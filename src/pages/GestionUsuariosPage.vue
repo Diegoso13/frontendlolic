@@ -187,9 +187,17 @@ function confirmarEliminar() {
     persistent: true
   }).onOk(async () => {
 
-      await eliminar(usuario.id)
-      selected.value = []
+      const volverPaginaAnterior =
+    usuarios.value.length === 1 &&
+    pagination.value.page > 1
 
+  await eliminar(usuario.id)
+
+  if (volverPaginaAnterior) {
+    pagination.value.page--
+  }
+
+  selected.value = []
       await listar({
         search: filtros.value.search,
         ordering: filtros.value.ordering,

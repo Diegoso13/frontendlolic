@@ -271,13 +271,6 @@ async function recuperarLicencia() {
     equipoSeleccionado.value = null
     ticket.value = ''
     observacion.value = ''
-
-  } catch (error) {
-    console.error('Error recuperando licencia:', error)
-    $q.notify({
-      type: 'negative',
-      message: 'Error al recuperar licencia.'
-    })
   } finally {
     loadingRecuperar.value = false
   }
