@@ -3,7 +3,8 @@ import axios from 'axios'
 import { Notify } from 'quasar'
 
 const api = axios.create({
-  baseURL: 'https://backendlolic.onrender.com/licencias/',
+  baseURL: 'http://127.0.0.1:8000//licencias/',
+  //baseURL: 'https://backendlolic.onrender.com/licencias/',
 })
 
 export default boot(({ app }) => {

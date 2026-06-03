@@ -93,6 +93,7 @@
 
             <q-separator spaced inset />
             <NavItem to="/agenda"    icon="event"          label="Agenda" />
+            <NavItem to="/movimientos"    icon="list"          label="Movimientos" />
 
           </template>
 
